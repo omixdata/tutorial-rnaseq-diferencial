@@ -1,8 +1,6 @@
 mkdir -p reads/
 cd reads/
 
-while read line; do
-
-	fastq-dump $line
-
+while read sample; do
+	fastq-dump $sample
 done < ../samples
