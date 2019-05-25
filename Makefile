@@ -1,3 +1,13 @@
+install:
+	apt-get install sra-toolkit
+	apt-get install rna-star
+	apt-get install samtools
+	apt-get install python-htseq
+	apt-get install libxml2-dev
+	apt-get install python3-pip
+	pip3 install pandas
+	Rscript scripts/install_packages.R
+
 download_data:
 	bash scripts/step_00.download_data.sh
 
