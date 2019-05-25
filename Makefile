@@ -12,4 +12,6 @@ count_reads:
 	bash scripts/step_04.count_reads_on_genes.sh
 
 differential_expression_analysis:
-	Rscript scripts/step_05.differential_expression.R
+	mkdir -p differential_expression; \
+	cd differential_expression; \
+	Rscript ../scripts/step_06.differential_expression.R
