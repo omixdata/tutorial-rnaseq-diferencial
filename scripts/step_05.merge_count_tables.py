@@ -7,4 +7,5 @@ merged_df = samples_df[0][['locus_tag']]
 for s,sample in enumerate(samples):
 	merged_df[sample] = samples_df[s][sample]
 
+df.drop(df.tail(5).index,inplace=True)
 merged_df.to_csv("read_count/merged.csv", index=False)
