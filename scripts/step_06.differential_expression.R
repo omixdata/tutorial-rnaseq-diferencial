@@ -11,6 +11,7 @@ sampleInfo <- read.table("../samples_groups", header=TRUE, row.names=1, sep=',')
 
 dgeFull <- DGEList(rawCountTable, group=sampleInfo$group)
 dgeFull$sampleInfo <- sampleInfo
+dgeFull$samples$condition <- relevel(sampleInfo$group, ref = "CONTROL")
 
 pseudoCounts <- log2(dgeFull$counts+1)
 
